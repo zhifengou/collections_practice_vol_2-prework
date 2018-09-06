@@ -59,15 +59,15 @@ end
     
     
 def merge_data(keys, data)
-  merged = []
+  merge = []
   keys.each do |each|
     data[0].each do |key,value|
       if each.values[0]==key
-        merged << each.merge(value)
+        merge << each.merge(value)
       end
     end
   end
-  merged
+  merge
 end
 
   
