@@ -59,19 +59,9 @@ end
     
     
 def merge_data(keys, data)
-  array=Array.new 
-  data.collect do |data_item| 
-    data_item.each do |key1, value1| 
-      keys.each do |key|
-        key.each do |key2, value2|
-          if key1 == value2 
-            array << key.merge(value1)
-          end
-        end
-      end
-    end
-  end
-  array
+  merged = []
+  keys.each {|i| data.first.map {|k,v| if i.values[0] == k then merged << i.merge(v) end}}
+  merged
 end
 
   
