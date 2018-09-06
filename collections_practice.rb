@@ -58,11 +58,17 @@ def count_elements(arr)
 end
     
     
-def merge_data (keys, data)
-  merge=[]
-  keys.each do |each|
-    data.each do |hash|
-    merge << 
+def merge_data(keys, data) 
+merge = []
+ 
+  data[0].each do |key, value|
+    puts "key: #{key}"
+    puts "value: #{value}"
+    value[:first_name] = key
+    merge << value
+  end
+  merge
+end
   
   
   
