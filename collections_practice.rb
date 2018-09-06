@@ -58,17 +58,22 @@ def count_elements(arr)
 end
     
     
-def merge_data(keys, data) 
-merge = []
- 
-  data[0].each do |key, value|
-    puts "key: #{key}"
-    puts "value: #{value}"
-    value[:first_name] = key
-    merge << value
+def merge_data(keys, data)
+  array=Array.new 
+  data.collect do |data_item| 
+    data_item.each do |key1, value1| 
+      keys.each do |key|
+        key.each do |key2, value2|
+          if key1 == value2 
+            array << key.merge(value1)
+          end
+        end
+      end
+    end
   end
-  merge
+  array
 end
+
   
   
   
