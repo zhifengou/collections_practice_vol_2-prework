@@ -63,7 +63,7 @@ def merge_data(keys, data)
   keys.each do |each|
     data[0].each do |key,value|
       if each.values[0]==key
-        merge << each.merge(value)
+        merge << each.push(value)
       end
     end
   end
