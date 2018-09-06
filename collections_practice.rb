@@ -60,7 +60,8 @@ end
     
 def merge_data (keys, data)
   merge=[]
-  
+  keys.each do |each|
+    
   
   
   
