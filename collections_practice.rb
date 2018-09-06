@@ -64,7 +64,7 @@ merge = []
   data[0].each do |key, value|
     puts "key: #{key}"
     puts "value: #{value}"
-    # value[:first_name] = key
+    value[:first_name] = key
     merge << value
   end
   merge
