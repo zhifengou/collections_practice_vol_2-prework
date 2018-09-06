@@ -59,7 +59,8 @@ end
     
     
 def merge_data (keys, data)
-  merge={}
+  merge=[]
+  
   
   
   
