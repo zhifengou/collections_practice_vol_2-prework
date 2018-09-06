@@ -59,10 +59,9 @@ end
     
     
 def merge_data (keys, data)
-  merge=[]
   keys.each do |each|
     data.each do |hash|
-    each.merge!
+    each.merge!()
   
   
   
