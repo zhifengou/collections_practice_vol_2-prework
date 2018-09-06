@@ -60,6 +60,13 @@ end
     
 def merge_data(keys, data)
   merged = []
+  keys.each do |each|
+    data.first.map do |key,value|
+      if each.values[0]==key
+        merged << each.merge(value)
+      end
+    end
+  end
   keys.each {|i| data.first.map {|k,v| if i.values[0] == k then merged << i.merge(v) end}}
   merged
 end
